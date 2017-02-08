@@ -6,9 +6,9 @@ Use it as is or as a foundation for your own config.
 
 ## Example
 
-```scss
-// TODO
-```
+View examples of valid and invalid SCSS syntax in the `__tests__/__fixtures__` folder.
+
+**[View examples](https://github.com/salesforce-ux/stylelint-config-slds/tree/master/__tests__/__fixtures__)**
 
 ## Installation
 
