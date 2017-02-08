@@ -1,0 +1,69 @@
+/**
+ * Valid
+ */
+
+.slds-starts-with-slds {
+  width: 0;
+}
+
+.slds-contains-numbers-123 {
+  width: 0;
+}
+
+.slds-is__old--bem {
+  width: 0;
+}
+
+.slds-is__new--bem {
+  width: 0;
+}
+
+$lowercase-var-name: true;
+
+@mixin lowercase-mixin-name($args...) {
+  margin: 0;
+}
+
+@mixin lowercase-mixin-name-with-number-123($args...) {
+  box-shadow: $args;
+}
+
+@function lowercase-function-name($args...) {
+  @return 'foo';
+}
+
+/**
+ * Invalid
+ */
+
+#id { // 'Unexpected id selector (selector-no-id)'
+  width: 100%;
+}
+
+// Expected class selector ".doesnt-start-with-slds" to match specified pattern (selector-class-pattern)
+.doesnt-start-with-slds {
+  width: 10px;
+}
+
+// Expected class selector ".slds-containsMixedCase" to match specified pattern (selector-class-pattern)
+.slds-containsMixedCase {
+  width: 10px;
+}
+
+// Expected class selector ".slds-containsMixedCase" to match specified pattern (selector-class-pattern)
+.slds-containsMixedCase {
+  width: 10px;
+}
+
+// Expected $ variable name to match specified pattern (scss/dollar-variable-pattern)
+$MIXEdCASE-VAR-Name: 'bar';
+
+// Expected @mixin name to match specified pattern (scss/at-mixin-pattern)
+@mixin MixedCaseMixinName($args...) {
+  width: 100%;
+}
+
+// Expected @function name to match specified pattern (scss/at-function-pattern)
+@function MixedCaseFunctionName($args...) {
+  @return 'bar';
+}

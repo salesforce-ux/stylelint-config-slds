@@ -1,0 +1,55 @@
+.slds-rule-valid {
+  @include foo();
+  @include bar();
+
+  @media (min-width: 30em) {
+    width: 0;
+  }
+
+  .slds-rule-valid__a {
+    width: 100%;
+  }
+
+  // Comment
+  .slds-rule-valid__b {
+    width: 100%;
+  }
+}
+
+.slds-rule-1 {
+  @include foo();
+  @function baz() { // Expected empty line before at-rule (at-rule-empty-line-before)
+    @return 'foobar';
+  }
+
+  @include bar();
+
+  @include foo(); // Unexpected empty line before at-rule (at-rule-empty-line-before)
+  width: 100%;
+}
+.slds-rule-2 { // Expected empty line before rule (rule-empty-line-before)
+  width: 100%;
+  .slds-rule-3 { // Expected empty line before rule (rule-empty-line-before)
+    width: 100%;
+  }
+  .slds-rule-4 { // Expected empty line before rule (rule-empty-line-before)
+    width: 100%;
+  }
+  @media (min-width: 50em) { // Expected empty line before at-rule (at-rule-empty-line-before)
+
+    .slds-rule-4a, // Expected empty line before rule (rule-empty-line-before)
+    .slds-rule-4b {
+
+      @media (min-width: 30em) { // Unexpected empty line before at-rule (at-rule-empty-line-before)
+        width: 100%;
+        @include foo(); // Expected empty line before at-rule (at-rule-empty-line-before)
+      }
+    }
+  }
+}
+
+// Put rule immediately after comment:
+
+.slds-rule-5 { // Unexpected empty line before rule (rule-empty-line-before)
+  width: 100%;
+}
