@@ -1,3 +1,7 @@
+/**
+ * Valid
+ */
+
 .slds-rule-valid {
   @include foo();
   @include bar();
@@ -16,7 +20,11 @@
   }
 }
 
-.slds-rule-1 {
+/**
+ * Invalid
+ */
+
+.slds-invalid-1 {
   @include foo();
   @function baz() { // Expected empty line before at-rule (at-rule-empty-line-before)
     @return 'foobar';
@@ -27,18 +35,18 @@
   @include foo(); // Unexpected empty line before at-rule (at-rule-empty-line-before)
   width: 100%;
 }
-.slds-rule-2 { // Expected empty line before rule (rule-empty-line-before)
+.slds-invalid-2 { // Expected empty line before rule (rule-empty-line-before)
   width: 100%;
-  .slds-rule-3 { // Expected empty line before rule (rule-empty-line-before)
+  .slds-invalid-3 { // Expected empty line before rule (rule-empty-line-before)
     width: 100%;
   }
-  .slds-rule-4 { // Expected empty line before rule (rule-empty-line-before)
+  .slds-invalid-4 { // Expected empty line before rule (rule-empty-line-before)
     width: 100%;
   }
   @media (min-width: 50em) { // Expected empty line before at-rule (at-rule-empty-line-before)
 
-    .slds-rule-4a, // Expected empty line before rule (rule-empty-line-before)
-    .slds-rule-4b {
+    .slds-invalid-4a, // Expected empty line before rule (rule-empty-line-before)
+    .slds-invalid-4b {
 
       @media (min-width: 30em) { // Unexpected empty line before at-rule (at-rule-empty-line-before)
         width: 100%;
@@ -50,6 +58,6 @@
 
 // Put rule immediately after comment:
 
-.slds-rule-5 { // Unexpected empty line before rule (rule-empty-line-before)
+.slds-invalid-5 { // Unexpected empty line before rule (rule-empty-line-before)
   width: 100%;
 }

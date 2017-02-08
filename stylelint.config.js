@@ -72,17 +72,10 @@ module.exports = {
     },
     "font-family-no-duplicate-names": true,
     "function-calc-no-unspaced-operator": true,
-    "function-comma-space-after": "always",
+    "function-comma-space-after": "always-single-line",
     "function-comma-space-before": "never",
     "indentation": [
       2,
-      {
-        ignore: [
-          "inside-parens",
-          "param",
-          "value",
-        ],
-      },
     ],
     "length-zero-no-unit": true,
     "max-nesting-depth": 3,

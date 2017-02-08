@@ -165,4 +165,13 @@ describe("names", () => {
     lintFile("rule-spacing")
       .then(data =>
         expect(data.results[0].warnings.length).toBe(10)))
+
+  it("complains about bad indentation", () =>
+    lintFile("indentation")
+      .then(data =>
+        expect(data.results[0].warnings.length).toBe(5)))
+  it("complains about bad values", () =>
+    lintFile("values")
+      .then(data =>
+        expect(data.results[0].warnings.length).toBe(2)))
 })

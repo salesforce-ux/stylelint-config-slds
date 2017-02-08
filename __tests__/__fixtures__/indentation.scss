@@ -1,0 +1,48 @@
+/**
+ * Valid
+ */
+
+.slds-valid {
+  width: 0;
+  text-shadow: #fff 0 0 1px,
+    #f0f 0 0 1px;
+  box-shadow:
+    #fff 0 0 1px,
+    #f0f 0 0 1px;
+  color: rgb(
+    255,
+    255,
+    255
+  );
+}
+
+@media print,
+  (min-width: 30em),
+  (min-resolution: 120dpi) {
+
+  .slds-valid {
+    width: 0;
+  }
+}
+
+/**
+ * Invalid
+ */
+
+.slds-invalid {
+	width: 0; // Expected indentation of 2 spaces (indentation)
+  box-shadow:
+             #fff 0 0 1px,
+    // ^ Expected indentation of 4 spaces (indentation)
+
+  #f0f 0 0 1px;
+  // ^ Expected indentation of 4 spaces (indentation)
+  .slds-invalid {
+	  width: 0;	// Expected indentation of 4 spaces (indentation)
+  }
+}
+
+.slds-invalid {
+    width: 0; // Expected indentation of 2 spaces (indentation)
+}
+

@@ -1,24 +1,36 @@
-// Expected newline after "{" (block-opening-brace-newline-after)
-// Expected newline before "}" (block-closing-brace-newline-before)
-.slds-selector-1 { width: 100%; }
+/**
+ * Valid
+ */
 
-// Expected newline after "{" (block-opening-brace-newline-after)
-.slds-selector-2 { width: 100%;
-}
-
-.slds-selector-3 {
-  width: 100%; } // Expected newline before "}" (block-closing-brace-newline-before)
-.slds-foo {
+.slds-valid {
   width: 100%;
 }
 
-.slds-selector-4 {
+/**
+ * Invalid
+ */
+
+// Expected newline after "{" (block-opening-brace-newline-after)
+// Expected newline before "}" (block-closing-brace-newline-before)
+.slds-invalid-1 { width: 100%; }
+
+// Expected newline after "{" (block-opening-brace-newline-after)
+.slds-invalid-2 { width: 100%;
+}
+
+.slds-invalid-3 {
+  width: 100%; } // Expected newline before "}" (block-closing-brace-newline-before)
+.slds-following-invalid {
+  width: 100%;
+}
+
+.slds-invalid-4 {
   width: 100%;
 
 } // Unexpected empty line before closing brace (block-closing-brace-empty-line-before)
 
 // Expected single space before "{" (block-opening-brace-space-before)
-.slds-selector-5
+.slds-invalid-5
 {
   width: 100%;
 }

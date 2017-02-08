@@ -1,0 +1,16 @@
+/**
+ * Valid
+ */
+
+.slds-valid {
+  width: 0;
+}
+
+/**
+ * Invalid
+ */
+
+.slds-invalid {
+  width: 0px; // Unexpected unit (length-zero-no-unit)
+  border: none; // Unexpected value "none" for property "border" (declaration-property-value-blacklist)
+}
