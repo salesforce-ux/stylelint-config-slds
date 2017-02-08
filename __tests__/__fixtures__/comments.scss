@@ -1,0 +1,27 @@
+/**
+ * Valid
+ */
+
+.slds-/* comment inside selector */valid {
+  width: 0;
+}
+
+/* Single-line comment */
+
+/**
+ * Multi-line comment
+ */
+
+// Sass comment
+
+//
+// Multi-line Sass comment
+//
+
+/**
+ * Invalid
+ */
+
+/*Missing whitespace in comment*/
+
+//Missing whitespace in Sass comment

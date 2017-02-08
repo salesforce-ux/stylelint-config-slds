@@ -135,6 +135,7 @@ module.exports = {
     ],
     "scss/dollar-variable-colon-space-before": "never",
     "scss/dollar-variable-colon-space-after": "always",
+    "scss/double-slash-comment-whitespace-inside": "always",
     "scss/at-function-pattern": [
       "^[a-z0-9-]+$",
       {
