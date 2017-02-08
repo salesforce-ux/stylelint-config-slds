@@ -10,6 +10,8 @@ View examples of valid and invalid SCSS syntax in the `__tests__/__fixtures__` f
 
 **[View examples](https://github.com/salesforce-ux/stylelint-config-slds/tree/master/__tests__/__fixtures__)**
 
+To see the rules that this config uses, please read [the config itself](https://github.com/salesforce-ux/stylelint-config-slds/blob/master/stylelint.config.js).
+
 ## Installation
 
 ```bash
