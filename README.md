@@ -1,4 +1,4 @@
-# stylelint-congig-slds [![NPM version](http://img.shields.io/npm/v/stylelint-config-standard.svg)](https://www.npmjs.org/package/stylelint-config-slds) [![Build Status](https://travis-ci.org/salesforce-ux/stylelint-config-slds.svg?branch=master)](https://travis-ci.org/salesforce-ux/stylelint-config-slds)
+# stylelint-config-slds [![NPM version](http://img.shields.io/npm/v/stylelint-config-standard.svg)](https://www.npmjs.org/package/stylelint-config-slds) [![Build Status](https://travis-ci.org/salesforce-ux/stylelint-config-slds.svg?branch=master)](https://travis-ci.org/salesforce-ux/stylelint-config-slds)
 
 The [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) shareable config for stylelint.
 
