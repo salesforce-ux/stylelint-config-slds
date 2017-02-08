@@ -30,6 +30,9 @@ module.exports = {
     ],
     "at-rule-blacklist": [
       "extend",
+      {
+        severity: "error",
+      },
     ],
     "block-opening-brace-newline-after": "always",
     "block-closing-brace-newline-before": "always",

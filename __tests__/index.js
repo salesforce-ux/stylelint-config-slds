@@ -174,4 +174,10 @@ describe("names", () => {
     lintFile("values")
       .then(data =>
         expect(data.results[0].warnings.length).toBe(2)))
+  it("complains about extends", () =>
+    lintFile("extend")
+      .then(data => {
+        expect(data.errored).toBeTruthy()
+        expect(data.results[0].warnings.length).toBe(1)
+      }))
 })
