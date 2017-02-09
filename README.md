@@ -6,6 +6,37 @@ Use it as is or as a foundation for your own config.
 
 ## Example
 
+```scss
+.slds-with-number-1-in-it {
+  width: 100%;
+}
+
+.slds-foo {
+  width: 5em;
+
+  .slds-bar {
+    margin: 0;
+    border: 0;
+  }
+
+  .slds-baz {
+    background: 0;
+  }
+}
+
+@media (min-width: 30em) {
+
+  .slds-container {
+
+    .slds-child {
+      margin: 0;
+      border: 0;
+    }
+  }
+}
+
+```
+
 View examples of valid and invalid SCSS syntax in the `__tests__/__fixtures__` folder.
 
 **[View examples](https://github.com/salesforce-ux/stylelint-config-slds/tree/master/__tests__/__fixtures__)**

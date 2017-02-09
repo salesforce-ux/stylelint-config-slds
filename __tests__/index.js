@@ -17,13 +17,23 @@ const validCss = `
     margin: 0;
     border: 0;
   }
-}
-`
 
-const invalidCss = `
-#id {
-  width: 100%;
+  .slds-baz {
+    background: 0;
+  }
 }
+
+@media (min-width: 30em) {
+
+  .slds-container {
+
+    .slds-child {
+      margin: 0;
+      border: 0;
+    }
+  }
+}
+
 `
 
 describe("flags no warnings with valid css", () => {
@@ -80,6 +90,13 @@ describe("flags no warnings with valid css", () => {
   })
 })
 
+const invalidCss = `
+#invalid {
+  width: 100%;
+}
+
+`
+
 describe("flags warnings with invalid css", () => {
   let result
 
@@ -133,13 +150,6 @@ describe("flags warnings with invalid css", () => {
     ))
   })
 })
-
-// const lint = (code) =>
-//   stylelint.lint({
-//     code,
-//     config,
-//     syntax: "scss",
-//   })
 
 const lintFile = (pattern) =>
   stylelint.lint({
