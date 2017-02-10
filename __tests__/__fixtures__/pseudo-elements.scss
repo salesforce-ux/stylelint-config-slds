@@ -1,0 +1,20 @@
+/**
+ * Valid
+ */
+
+.slds-valid:after {
+  width: 0;
+}
+
+.slds-valid::placeholder {
+  color: #ff0;
+}
+
+/**
+ * Invalid
+ * Note that Sass converts ::after into :after
+ */
+
+.slds-invalid::after { // Expected single colon pseudo-element notation (selector-pseudo-element-colon-notation)
+  width: 0;
+}
