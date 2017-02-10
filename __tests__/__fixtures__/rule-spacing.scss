@@ -56,8 +56,7 @@
   .slds-invalid-4 { // Expected empty line before rule (rule-empty-line-before)
     width: 100%;
   }
-  @media (min-width: 50em) { // Expected empty line before at-rule (at-rule-empty-line-before)
-
+  @media (min-width: 50em) /* Expected empty line before at-rule (at-rule-empty-line-before) */ {
     .slds-invalid-4a, // Expected empty line before rule (rule-empty-line-before)
     .slds-invalid-4b {
 
