@@ -96,7 +96,7 @@ module.exports = {
     "selector-attribute-operator-space-before": "never",
     "selector-attribute-quotes": "always",
     "selector-class-pattern": [
-      "^slds-[a-z0-9_-]+$",
+      "^slds(-[a-z0-9_-]+|)$",
       {
         severity: "error",
         resolveNestedSelectors: true,
@@ -140,19 +140,19 @@ module.exports = {
     "scss/dollar-variable-colon-space-after": "always",
     "scss/double-slash-comment-whitespace-inside": "always",
     "scss/at-function-pattern": [
-      "^[a-z0-9-]+$",
+      "^_?[a-z0-9-]+$",
       {
         severity: "error",
       },
     ],
     "scss/at-mixin-pattern": [
-      "^[a-z0-9-]+$",
+      "^_?[a-z0-9-]+$",
       {
         severity: "error",
       },
     ],
     "scss/dollar-variable-pattern": [
-      "^[a-z0-9-]+$",
+      "^_?[a-z0-9-]+$",
       {
         severity: "error",
       },

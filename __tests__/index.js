@@ -159,35 +159,40 @@ const lintFile = (pattern) =>
   })
 
 describe("names", () => {
-  it("should error on wrong selector names", () =>
+  it("selector-naming", () =>
     lintFile("selector-naming")
       .then(data => {
         expect(data.errored).toBeTruthy()
-        expect(data.results[0].warnings.length).toBe(7)
+        expect(data.results[0].warnings.length).toBe(8)
       }))
 
-  it("closes braces properly", () =>
+  it("rule-braces", () =>
     lintFile("rule-braces")
       .then(data =>
         expect(data.results[0].warnings.length).toBe(6)))
 
-  it("spaces rules with one new line", () =>
+  it("rule-spacing", () =>
     lintFile("rule-spacing")
       .then(data =>
-        expect(data.results[0].warnings.length).toBe(10)))
+        expect(data.results[0].warnings.length).toBe(11)))
 
-  it("complains about bad indentation", () =>
+  it("indentation", () =>
     lintFile("indentation")
       .then(data =>
         expect(data.results[0].warnings.length).toBe(5)))
-  it("complains about bad values", () =>
+  it("values", () =>
     lintFile("values")
       .then(data =>
         expect(data.results[0].warnings.length).toBe(2)))
-  it("complains about extends", () =>
+  it("extend", () =>
     lintFile("extend")
       .then(data => {
         expect(data.errored).toBeTruthy()
+        expect(data.results[0].warnings.length).toBe(1)
+      }))
+  it("pseudo-elements", () =>
+    lintFile("pseudo-elements")
+      .then(data => {
         expect(data.results[0].warnings.length).toBe(1)
       }))
 })

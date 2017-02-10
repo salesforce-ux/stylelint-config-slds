@@ -2,6 +2,10 @@
  * Valid
  */
 
+.slds {
+  width: 0;
+}
+
 .slds-starts-with-slds {
   width: 0;
 }
@@ -18,9 +22,28 @@
   width: 0;
 }
 
+// FIXME: uncomment when this stylelint bug is fixed:
+// https://github.com/stylelint/stylelint/issues/2334
+// .slds-#{$interpolated}-class-name {
+//   width: 0;
+//
+//   &:hover {
+//     width: 100%;
+//   }
+//
+//   &.slds-is-valid {
+//     width: 50%;
+//   }
+// }
+
 $lowercase-var-name: true;
+$_private-var-name: true;
 
 @mixin lowercase-mixin-name($args...) {
+  margin: 0;
+}
+
+@mixin _private-mixin($args...) {
   margin: 0;
 }
 
@@ -32,12 +55,22 @@ $lowercase-var-name: true;
   @return 'foo';
 }
 
+@function _private-function($args...) {
+  @return 'foo';
+}
+
 /**
  * Invalid
  */
 
-#id { // 'Unexpected id selector (selector-no-id)'
+// 'Unexpected id selector (selector-no-id)'
+#id {
   width: 100%;
+}
+
+// Expected class selector ".slds-" to match specified pattern (selector-class-pattern)
+.slds- {
+  width: 0;
 }
 
 // Expected class selector ".doesnt-start-with-slds" to match specified pattern (selector-class-pattern)
