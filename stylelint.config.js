@@ -113,7 +113,10 @@ module.exports = {
     "selector-pseudo-element-colon-notation": "single",
     "selector-type-case": "lower",
     "shorthand-property-no-redundant-values": true,
-    "string-quotes": "single",
+    // Ideally we'd have single quotes in functions
+    // and double quotes in attribute names.
+    // See https://github.com/stylelint/stylelint/issues/704
+    // "string-quotes": "single",
     "unit-no-unknown": true,
     "value-keyword-case": [
       "lower",
