@@ -22,6 +22,17 @@
   }
 }
 
+@keyframes a-valid-animation {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 /**
  * Invalid
  */
@@ -58,8 +69,11 @@
   }
 }
 
-// Put rule immediately after comment:
-
-.slds-invalid-5 { // Unexpected empty line before rule (rule-empty-line-before)
-  width: 100%;
+@keyframes an-invalid-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
 }
