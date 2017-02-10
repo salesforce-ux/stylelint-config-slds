@@ -16,7 +16,9 @@
 
   // Comment
   .slds-rule-valid__b {
-    width: 100%;
+    @media (min-width: 30em) {
+      width: 0;
+    }
   }
 }
 

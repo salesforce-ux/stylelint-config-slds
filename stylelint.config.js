@@ -28,6 +28,14 @@ module.exports = {
         ],
       },
     ],
+    "rule-empty-line-before": [
+      "always",
+      {
+        ignore: [
+          "after-comment",
+        ],
+      },
+    ],
     "at-rule-blacklist": [
       "extend",
       {
@@ -84,14 +92,6 @@ module.exports = {
     "max-nesting-depth": 3,
     "no-missing-end-of-source-newline": true,
     "number-leading-zero": "always",
-    "rule-empty-line-before": [
-      "always",
-      {
-        except: [
-          "after-single-line-comment",
-        ],
-      },
-    ],
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
     "selector-attribute-quotes": "always",
