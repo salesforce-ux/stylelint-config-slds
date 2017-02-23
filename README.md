@@ -46,7 +46,7 @@ To see the rules that this config uses, please read [the config itself](https://
 ## Installation
 
 ```bash
-npm install stylelint-config-slds --save-dev
+npm install stylelint stylelint-config-slds --save-dev
 ```
 
 ## Usage
