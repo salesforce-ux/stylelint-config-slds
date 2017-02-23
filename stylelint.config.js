@@ -26,6 +26,9 @@ module.exports = {
         ignore: [
           "after-comment",
         ],
+        ignoreAtRules: [
+          "else",
+        ],
       },
     ],
     "rule-empty-line-before": [
@@ -43,6 +46,15 @@ module.exports = {
       },
     ],
     "block-opening-brace-newline-after": "always",
+    "block-closing-brace-newline-after": [
+      "always",
+      {
+        ignoreAtRules: [
+          "if",
+          "else",
+        ],
+      },
+    ],
     "block-closing-brace-newline-before": "always",
     "block-no-empty": true,
     "block-opening-brace-space-before": "always",
@@ -132,7 +144,6 @@ module.exports = {
     "value-no-vendor-prefix": true,
     "property-no-vendor-prefix": true,
     "media-feature-name-no-vendor-prefix": true,
-    "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
     "scss/selector-no-redundant-nesting-selector": true,
     "scss/at-import-no-partial-leading-underscore": true,
     "scss/at-import-partial-extension-blacklist": [

@@ -20,6 +20,28 @@
       width: 0;
     }
   }
+
+  .slds-rule-valid__c {
+    width: 0;
+
+    @if true {
+      margin: 0;
+    } @else if false {
+      margin: 10px;
+    } @else {
+      margin: 10px;
+    }
+
+    @if true {
+      margin: 0;
+    }
+    @else if false {
+      margin: 10px;
+    }
+    @else {
+      margin: 10px;
+    }
+  }
 }
 
 @keyframes a-valid-animation {
