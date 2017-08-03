@@ -101,7 +101,7 @@ module.exports = {
       2,
     ],
     "length-zero-no-unit": true,
-    "max-nesting-depth": 3,
+    "max-nesting-depth": 5,
     "no-missing-end-of-source-newline": true,
     "number-leading-zero": "always",
     "selector-attribute-operator-space-after": "never",
@@ -115,12 +115,6 @@ module.exports = {
       },
     ],
     "selector-list-comma-newline-after": "always",
-    "selector-no-id": [
-      true,
-      {
-        severity: "error",
-      },
-    ],
     "selector-pseudo-element-case": "lower",
     "selector-pseudo-element-colon-notation": "single",
     "selector-type-case": "lower",
