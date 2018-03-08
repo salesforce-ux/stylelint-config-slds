@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-slds",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "The Salesforce Lightning Design System shareable config for stylelint",
   "main": "index.js",
   "scripts": {
