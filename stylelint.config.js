@@ -116,7 +116,6 @@ module.exports = {
     ],
     "selector-list-comma-newline-after": "always",
     "selector-pseudo-element-case": "lower",
-    "selector-pseudo-element-colon-notation": "single",
     "selector-type-case": "lower",
     "shorthand-property-no-redundant-values": true,
     // Ideally we'd have single quotes in functions
