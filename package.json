@@ -33,15 +33,10 @@
   },
   "homepage": "https://github.com/salesforce-ux/stylelint-config-slds#readme",
   "devDependencies": {
-    "eslint": "^3.19.0",
+    "eslint": "^5.0.0",
     "eslint-config-stylelint": "^6.0.0",
-    "jest": "^19.0.2",
-    "stylelint": "^7.10.1"
-  },
-  "peerDependencies": {
-    "stylelint": "^7.10.1"
-  },
-  "dependencies": {
-    "stylelint-scss": "^1.4.3"
+    "jest": "^24.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-scss": "^3.19.0"
   }
 }
