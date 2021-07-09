@@ -48,15 +48,13 @@ describe("flags no warnings with valid css", () => {
   })
 
   it("did not error", () => {
-    return result.then(data => (
-      expect(data.errored).toBeFalsy()
-    ))
+    return result.then((data) => expect(data.errored).toBeFalsy())
   })
 
   it("flags no deprecations", () => {
-    return result.then(data => {
+    return result.then((data) => {
       if (data.results[0].deprecations) {
-        data.results[0].deprecations.forEach(deprecation =>
+        data.results[0].deprecations.forEach((deprecation) =>
           console.log(deprecation.text)
         )
       }
@@ -66,9 +64,9 @@ describe("flags no warnings with valid css", () => {
   })
 
   it("flags no invalidOptionWarnings", () => {
-    return result.then(data => {
+    return result.then((data) => {
       if (data.results[0].invalidOptionWarnings.length) {
-        data.results[0].invalidOptionWarnings.forEach(invalidOption =>
+        data.results[0].invalidOptionWarnings.forEach((invalidOption) =>
           console.log(invalidOption.text)
         )
       }
@@ -78,76 +76,15 @@ describe("flags no warnings with valid css", () => {
   })
 
   it("flags no warnings", () => {
-    return result.then(data => {
+    return result.then((data) => {
       if (data.results[0].warnings.length) {
-        data.results[0].warnings.forEach(warning =>
+        data.results[0].warnings.forEach((warning) =>
           console.log(warning.text)
         )
       }
 
       expect(data.results[0].warnings.length).toBe(0)
     })
-  })
-})
-
-const invalidCss = `
-#invalid {
-  width: 100%;
-}
-
-`
-
-describe("flags warnings with invalid css", () => {
-  let result
-
-  beforeEach(() => {
-    result = stylelint.lint({
-      code: invalidCss,
-      config,
-      syntax: "scss",
-    })
-  })
-
-  it("did error", () => {
-    return result.then(data => (
-      expect(data.errored).toBeTruthy()
-    ))
-  })
-
-  it("flags one warning", () => {
-    return result.then(data => (
-      expect(data.results[0].warnings.length).toBe(1)
-    ))
-  })
-
-  it("correct warning text", () => {
-    return result.then(data => (
-      expect(data.results[0].warnings[0].text).toBe("Unexpected id selector (selector-no-id)")
-    ))
-  })
-
-  it("correct rule flagged", () => {
-    return result.then(data => (
-      expect(data.results[0].warnings[0].rule).toBe("selector-no-id")
-    ))
-  })
-
-  it("correct severity flagged", () => {
-    return result.then(data => (
-      expect(data.results[0].warnings[0].severity).toBe("error")
-    ))
-  })
-
-  it("correct line number", () => {
-    return result.then(data => (
-      expect(data.results[0].warnings[0].line).toBe(2)
-    ))
-  })
-
-  it("correct column number", () => {
-    return result.then(data => (
-      expect(data.results[0].warnings[0].column).toBe(1)
-    ))
   })
 })
 
@@ -160,39 +97,36 @@ const lintFile = (pattern) =>
 
 describe("names", () => {
   it("selector-naming", () =>
-    lintFile("selector-naming")
-      .then(data => {
-        expect(data.errored).toBeTruthy()
-        expect(data.results[0].warnings.length).toBe(8)
-      }))
+    lintFile("selector-naming").then((data) => {
+      expect(data.errored).toBeTruthy()
+      expect(data.results[0].warnings.length).toBe(7)
+    }))
 
   it("rule-braces", () =>
-    lintFile("rule-braces")
-      .then(data =>
-        expect(data.results[0].warnings.length).toBe(6)))
+    lintFile("rule-braces").then((data) =>
+      expect(data.results[0].warnings.length).toBe(6)
+    ))
 
   it("rule-spacing", () =>
-    lintFile("rule-spacing")
-      .then(data =>
-        expect(data.results[0].warnings.length).toBe(11)))
+    lintFile("rule-spacing").then((data) =>
+      expect(data.results[0].warnings.length).toBe(11)
+    ))
 
   it("indentation", () =>
-    lintFile("indentation")
-      .then(data =>
-        expect(data.results[0].warnings.length).toBe(5)))
+    lintFile("indentation").then((data) =>
+      expect(data.results[0].warnings.length).toBe(5)
+    ))
   it("values", () =>
-    lintFile("values")
-      .then(data =>
-        expect(data.results[0].warnings.length).toBe(2)))
+    lintFile("values").then((data) =>
+      expect(data.results[0].warnings.length).toBe(2)
+    ))
   it("extend", () =>
-    lintFile("extend")
-      .then(data => {
-        expect(data.errored).toBeTruthy()
-        expect(data.results[0].warnings.length).toBe(1)
-      }))
+    lintFile("extend").then((data) => {
+      expect(data.errored).toBeTruthy()
+      expect(data.results[0].warnings.length).toBe(1)
+    }))
   it("pseudo-elements", () =>
-    lintFile("pseudo-elements")
-      .then(data => {
-        expect(data.results[0].warnings.length).toBe(1)
-      }))
+    lintFile("pseudo-elements").then((data) => {
+      expect(data.results[0].warnings.length).toBe(1)
+    }))
 })

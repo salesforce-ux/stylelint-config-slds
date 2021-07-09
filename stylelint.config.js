@@ -4,17 +4,15 @@
 "use strict"
 
 module.exports = {
-  "plugins": [
-    "stylelint-scss",
-  ],
-  "ignoreFiles": [
+  plugins: ["stylelint-scss"],
+  ignoreFiles: [
     "node_modules",
     "app_modules",
     "ui/vendor/**",
     "site/assets/styles/_vendor/**",
   ],
-  "defaultSeverity": "warning",
-  "rules": {
+  defaultSeverity: "warning",
+  rules: {
     "at-rule-empty-line-before": [
       "always",
       {
@@ -23,23 +21,17 @@ module.exports = {
           "blockless-after-blockless",
           "first-nested",
         ],
-        ignore: [
-          "after-comment",
-        ],
-        ignoreAtRules: [
-          "else",
-        ],
+        ignore: ["after-comment"],
+        ignoreAtRules: ["else"],
       },
     ],
     "rule-empty-line-before": [
       "always",
       {
-        ignore: [
-          "after-comment",
-        ],
+        ignore: ["after-comment"],
       },
     ],
-    "at-rule-blacklist": [
+    "at-rule-disallowed-list": [
       "extend",
       {
         severity: "error",
@@ -49,10 +41,7 @@ module.exports = {
     "block-closing-brace-newline-after": [
       "always",
       {
-        ignoreAtRules: [
-          "if",
-          "else",
-        ],
+        ignoreAtRules: [ "if", "else" ],
       },
     ],
     "block-closing-brace-newline-before": "always",
@@ -67,13 +56,8 @@ module.exports = {
     "comment-empty-line-before": [
       "always",
       {
-        except: [
-          "first-nested",
-        ],
-        ignore: [
-          "after-comment",
-          "stylelint-commands",
-        ],
+        except: ["first-nested"],
+        ignore: [ "after-comment", "stylelint-commands" ],
       },
     ],
     "declaration-bang-space-after": "never",
@@ -85,21 +69,15 @@ module.exports = {
     "declaration-colon-space-after": "always-single-line",
     "declaration-colon-space-before": "never",
     "declaration-no-important": true,
-    "declaration-property-value-blacklist": {
-      "/^transition/": [
-        "/all/",
-      ],
-      "/^border/": [
-        "none",
-      ],
+    "declaration-property-value-disallowed-list": {
+      "/^transition/": ["/all/"],
+      "/^border/": ["none"],
     },
     "font-family-no-duplicate-names": true,
     "function-calc-no-unspaced-operator": true,
     "function-comma-space-after": "always-single-line",
     "function-comma-space-before": "never",
-    "indentation": [
-      2,
-    ],
+    indentation: [2],
     "length-zero-no-unit": true,
     "max-nesting-depth": 5,
     "no-missing-end-of-source-newline": true,
@@ -127,10 +105,7 @@ module.exports = {
     "value-keyword-case": [
       "lower",
       {
-        "ignoreKeywords": [
-          "Consolas",
-          "Monaco",
-        ],
+        ignoreKeywords: [ "Consolas", "Monaco" ],
       },
     ],
     "at-rule-no-vendor-prefix": true,
@@ -140,10 +115,7 @@ module.exports = {
     "media-feature-name-no-vendor-prefix": true,
     "scss/selector-no-redundant-nesting-selector": true,
     "scss/at-import-no-partial-leading-underscore": true,
-    "scss/at-import-partial-extension-blacklist": [
-      "scss",
-      "sass",
-    ],
+    "scss/at-import-partial-extension-blacklist": [ "scss", "sass" ],
     "scss/dollar-variable-colon-space-before": "never",
     "scss/dollar-variable-colon-space-after": "always",
     "scss/double-slash-comment-whitespace-inside": "always",

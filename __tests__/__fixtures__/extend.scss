@@ -3,6 +3,6 @@
  */
 
 .slds-invalid {
-  // Unexpected at-rule "extend" (at-rule-blacklist)
+  // Unexpected at-rule "extend" (at-rule-disallowed-list)
   @extend .foo;
 }
