@@ -80,7 +80,7 @@ module.exports = {
     indentation: [2],
     "length-zero-no-unit": true,
     "max-nesting-depth": 5,
-    "no-missing-end-of-source-newline": true,
+    "no-missing-end-of-source-newline": false,
     "number-leading-zero": "always",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
